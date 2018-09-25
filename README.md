@@ -1,4 +1,10 @@
 # fastSCA
+
+Requirements:
+	1.	Python 3.6.4 from Anaconda3 distribution 
+	2.	pandas 0.22.0
+	3.	numpy, scipy, matplotlib, importlib, argparse, etc
+	
 The python code provided in this package includes following functions --
 
 	1. incremental correlation power analysis - cpa (inc_cpa)
