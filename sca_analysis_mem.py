@@ -59,9 +59,6 @@ run_dnn_attack=0;
 exec(open('def_design.py').read())
 exec(open('global_settings.py').read())
 
-#python -i sca_analysis_mem.py public 20000 2000 10 0 0 5 1 0 0 1 1 0 0 16
-#python -i sca_analysis_mem.py template 750000 750000 1 1 0 5 1 0 0 0 1 0
-#python -i sca_analysis_mem.py --idir "/home/green3/asingh367/data/DLDO_SCA_ISSCC/power_data/dpa_contest_v2/" --odir "/home/green3/asingh367/data/DLDO_SCA_ISSCC/power_data/dpa_contest_v2/output/" --attackType public --NoofTraces 20000 --mtd_start_trace 2000 --mtd_npts 10 --single_band 1 --start_band 0 --end_band 5 --keyIndex 0 --collectTraces 1 --generatePowerModel 1 --run_cpa_attack 1 --is_filter 1 --is_dpa 0 --startKey 0 --endKey 16
 #python -i sca_analysis_mem.py --attackType public --NoofTraces 20000 --mtd_start_trace 2000 --mtd_npts 10 --single_band 1 --start_band 0 --end_band 5 --keyIndex 0 --collectTraces 1 --generatePowerModel 1 --run_cpa_attack 1 --is_filter 1 --is_dpa 0 --startKey 0 --endKey 16
 
 
