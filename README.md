@@ -13,7 +13,7 @@ The python code provided in this package includes following functions --
 
 All these attacks can be conducted in time domain (usual time-domain CPA/DPA) and in freq. domain to break desynchronization/misalignment based countermeasures.  
 
-NOTE: contains vectorized (matrix) operations to speed up the correlation computation. Uses numpy's einsum function optimized for vector/matrix multiply/other operations. Please read this article for more details - https://obilaniu6266h16.wordpress.com/2016/02/04/einstein-summation-in-numpy/
+NOTE 1: contains vectorized (matrix) operations to speed up the correlation computation. Uses numpy's einsum function optimized for vector/matrix multiply/other operations. Please read this article for more details - https://obilaniu6266h16.wordpress.com/2016/02/04/einstein-summation-in-numpy/
 
 HOW TO RUN:
 
@@ -22,6 +22,7 @@ Steps:
 	2. Define paths for parent dir to the downloaded power traces in def_design.py (variables 'idir' and 'odir')
 	3. All other variables should remain same in def_design.py if you are using dpa contest v2 dir structure
 	4. collectTraces and generatePowerModel variables should be 1 for running the attack for the first time. Can be made 0 when trace arrays are created and power models are generated from the 1st run. 
+NOTE 2: look into computational aspects of correlation power analysis attack paper for more details about incremental CPA (https://link.springer.com/article/10.1007/s13389-016-0122-9)
 
 Sample commnand for CPA based on dpa contest v2 database:
 
@@ -30,7 +31,7 @@ Sample commnand for CPA based on dpa contest v2 database:
 Sample commnand for template attack (TA) based on dpa contest v2 database:
 	python -i sca_analysis_mem.py --attackType template --NoofTraces 200000 --mtd_start_trace 2000 --mtd_npts 10 --single_band 1 --start_band 0 --end_band 5 --keyIndex 0 --collectTraces 0 --generatePowerModel 0 --run_cpa_attack 0 --is_filter 1 --is_dpa 0 --startKey 0 --endKey 16
 
-NOTE: for template attacks, its good idea to look at points of interest only as we are using all 1 million power traces for creating the templates. For the dpa contest v2 database, samples from 2500 to 3000 contain the last round (samples of interest) so can be chosen to reduce memory and compute complexity. Same thing can be applied for CPA.
+NOTE 3: for template attacks, its good idea to look at points of interest only as we are using all 1 million power traces for creating the templates. For the dpa contest v2 database, samples from 2500 to 3000 contain the last round (samples of interest) so can be chosen to reduce memory and compute complexity. Same thing can be applied for CPA.
 
 Files Description:
 
