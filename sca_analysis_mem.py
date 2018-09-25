@@ -90,7 +90,6 @@ elif args.attackType=='template':
 tsta=time.time()
 IKey=keymsgct_dict[0][0]
 #IKey='13198a2e03707344a4093822299f31d0' #keyIndex=1;
-#IKey='1F8E3BE2D4372D788CD2039FA8FED757'; # testchip key
 print(IKey)
 if args.collectTraces:
 	#np.savez_compressed(powerTraceFile, traceArray)
