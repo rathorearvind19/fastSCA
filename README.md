@@ -29,6 +29,7 @@ Sample commnand for CPA based on dpa contest v2 database:
 	python -i sca_analysis_mem.py --attackType public --NoofTraces 20000 --mtd_start_trace 2000 --mtd_npts 10 --single_band 1 --start_band 0 --end_band 5 --keyIndex 0 --collectTraces 0 --generatePowerModel 0 --run_cpa_attack 1 --is_filter 1 --is_dpa 0 --startKey 0 --endKey 16
 
 Sample commnand for template attack (TA) based on dpa contest v2 database:
+
 	python -i sca_analysis_mem.py --attackType template --NoofTraces 200000 --mtd_start_trace 2000 --mtd_npts 10 --single_band 1 --start_band 0 --end_band 5 --keyIndex 0 --collectTraces 0 --generatePowerModel 0 --run_cpa_attack 0 --is_filter 1 --is_dpa 0 --startKey 0 --endKey 16
 
 NOTE 3: for template attacks, its good idea to look at points of interest only as we are using all 1 million power traces for creating the templates. For the dpa contest v2 database, samples from 2500 to 3000 contain the last round (samples of interest) so can be chosen to reduce memory and compute complexity. Same thing can be applied for CPA.
