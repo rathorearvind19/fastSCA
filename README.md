@@ -24,11 +24,11 @@ Steps:
 	4. collectTraces and generatePowerModel variables should be 1 for running the attack for the first time. Can be made 0 when trace arrays are created and power models are generated from the 1st run. 
 NOTE 2: look into computational aspects of correlation power analysis attack paper for more details about incremental CPA (https://link.springer.com/article/10.1007/s13389-016-0122-9)
 
-Sample commnand for CPA based on dpa contest v2 database:
+Sample command for CPA based on dpa contest v2 public database:
 
 	python -i sca_analysis_mem.py --attackType public --NoofTraces 20000 --mtd_start_trace 2000 --mtd_npts 10 --single_band 1 --start_band 0 --end_band 5 --keyIndex 0 --collectTraces 0 --generatePowerModel 0 --run_cpa_attack 1 --is_filter 1 --is_dpa 0 --startKey 0 --endKey 16
 
-Sample commnand for template attack (TA) based on dpa contest v2 database:
+Sample command for template attack (TA) based on dpa contest v2 template database:
 
 	python -i sca_analysis_mem.py --attackType template --NoofTraces 200000 --mtd_start_trace 2000 --mtd_npts 10 --single_band 1 --start_band 0 --end_band 5 --keyIndex 0 --collectTraces 0 --generatePowerModel 0 --run_cpa_attack 0 --is_filter 1 --is_dpa 0 --startKey 0 --endKey 16
 
